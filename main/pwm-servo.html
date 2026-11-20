@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head style="font-family: monospace">
+       <meta charset="UTF-8">
+        <link rel="icon" href="Alptu%C4%9Fra%20pp.png"/>
+        <a href="helloWorld.html"><input type="image" src="Alptu%C4%9Fra%20pp.png" value="submit" width="50px"></a>     
+
+         <title style="font-family: monospace">Arduino uno PWM ile Servo motor</title>
+        <script src="helloworld.js"></script>
+        <link rel="icon" href="Alptu%C4%9Fra%20pp.png"/>
+         <h1 style="font-family: fantasy">Alptuğra'nın Arduino Rehberi</h1>
+   </head>
+    <body style="background-color: gray">
+        <p style="font-family: sans-serif"> PWM ile Servo motor Kontrol
+        </p> <h3 style="font-family: fantasy">Malzemeler:
+        
+        
+ </h3>
+        
+        
+       <h4 style="font-family: sans-serif">Arduino Uno <br> Servo m. <br> Breadboard <br> Potansiyometre <br>erkek-erkek jumper kaplo<br></h4>
+        <h3 style="font-family: fantasy">Devre kurulumu
+        
+        
+ </h3>
+     
+
+        <img src="arduino-potansiyometre-ile-servo-motor-kontrol%C3%BC.png" width="375" height="275"/>
+        <h3 style="font-family: fantasy">Kod:
+        
+        
+ </h3>
+        <h4 style="font-family: sans-serif">
+#include <Servo.h> <br>
+Servo sg90;<br>
+const byte potansiyometre = A5;<br> 
+int pot_deger;<br>
+void setup() <br>
+{<br>
+Serial.begin(9600);<br>
+sg90.attach(13);<br>
+}<br>
+void loop()<br>
+{<br>
+pot_deger = analogRead(potansiyometre); <br>
+int servo_deger = map(pot_deger , 0, 1023, 0, 180);<br>
+sg90.write(servo_deger);<br>
+Serial.print("Servo = ");<br>
+Serial.print(servo_deger);<br>
+Serial.println(" Derece");<br>
+delay(15);<br>
+}
+  </Servo.h></h4>
+
+
+
+
+        <a href="arduino.html"><button style="background-color: darkturquoise" onclick="blog()">Geri</button>
+            <a href="helloWorld.html">
+  <button style="background-color: darkturquoise"
+   >Ana sayfa</button>
+                                       </a>
+        </a>
+    </body>
+       
+</html>

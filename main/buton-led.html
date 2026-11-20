@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head style="font-family: monospace">
+       <meta charset="UTF-8">
+        <link rel="icon" href="Alptu%C4%9Fra%20pp.png"/>
+        <a href="helloWorld.html"><input type="image" src="Alptu%C4%9Fra%20pp.png" value="submit" width="50px"></a>     
+
+         <title style="font-family: monospace">Arduino uno Buton ile Led Yakma</title>
+        <script src="helloworld.js"></script>
+        <link rel="icon" href="Alptu%C4%9Fra%20pp.png"/>
+         <h1 style="font-family: fantasy">Alptuğra'nın Arduino Rehberi</h1>
+   </head>
+    <body style="background-color: gray">
+        <p style="font-family: sans-serif">Buton ile Led yakma
+        </p> <h3 style="font-family: fantasy">Malzemeler:
+        
+        
+ </h3>
+        
+        
+       <h4 style="font-family: sans-serif">Arduino Uno <br> Led <br> Breadboard <br>220 Ω direnç <br>erkek-erkek jumper kaplo<br>Button<br>10kΩ direnç</h4>
+        <h3 style="font-family: fantasy">Devre kurulumu
+        
+        
+ </h3>
+     
+
+        <img src="Arduino-Push-Button-with-LED.png" width="375" height="275"/>
+        <h3 style="font-family: fantasy">Kod:
+        
+        
+ </h3>
+        <h4 style="font-family: sans-serif">#define Buton 13<br>#define Led 9<br>void setup() <br>{ <br>pinMode(Buton, INPUT);<br>pinMode(Led, OUTPUT);<br>
+} <br>void loop()<br>
+{ <br>if (digitalRead(Buton) == 1)<br>digitalWrite(Led,HIGH);<br>else<br>digitalWrite(Led,LOW);<br>
+} </h4>
+
+        <a href="arduino.html"><button style="background-color: darkturquoise" onclick="blog()">Geri</button>
+     <a href="helloWorld.html"><button style="background-color: darkturquoise">Ana sayfa</button>
+                                       </a>
+        </a>
+    </body>
+       
+</html>
